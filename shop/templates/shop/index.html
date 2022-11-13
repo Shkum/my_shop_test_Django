@@ -1,0 +1,33 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my test</title>
+</head>
+<body>
+<link rel="stylesheet" href={% static 'shop/css/index.css' %}>
+<h1 class="h1">TEST</h1>
+<h2>{{ a }}</h2>
+<h3>
+<div>
+    <form action="" method="post">
+
+        {% csrf_token %}
+        Name:
+        <br>
+        {{  form.name }}
+        <br>
+        Birthday:
+        <br>
+        {{  form.date }}
+
+        <div>
+
+           <p><button type="submit">Send</button></p>
+        </div>
+    </form>
+</div>
+</h3>
+</body>
+</html>
